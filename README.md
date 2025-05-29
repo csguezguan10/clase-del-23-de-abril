@@ -1,5 +1,9 @@
 # clase-del-23-de-abril
-Quanser matlab
+
+## Integrantes 
+Carlos Stiven Guezguan         Codigo 96039                           
+Juan Jose Martinez             Codigo 105353
+
 # Plataforma Quanser
 
 Quanser es una plataforma educativa y de investigación especializada en sistemas de control, robótica y mecatrónica. Se utiliza en universidades y laboratorios para simular y experimentar con sistemas reales mediante hardware y software integrados.
@@ -11,132 +15,123 @@ Quanser es una plataforma educativa y de investigación especializada en sistema
 
 ## Primeros pasos
 
-Primero iniciamos el entorno de Quanser en MATLAB ejecutando las siguientes funciones:
+Para iniciar correctamente el entorno de Quanser QLabs en MATLAB, se debe seguir una secuencia estándar de funciones que garantiza la configuración, registro e inicio de los procesos necesarios. A continuación, se describen las funciones empleadas en este procedimiento:
 
-- **1. QLabs.setup**
-Función: Configura el entorno de trabajo en QLabs, inicializando los componentes esenciales para su operación.
-Detalle:
+QLabs.setup
 
-Establece conexiones con dispositivos y servidores.
+Esta función tiene como objetivo preparar el entorno de trabajo de QLabs. Su ejecución inicializa los componentes esenciales para el funcionamiento del sistema. Entre sus tareas principales se encuentran:
+Establecimiento de conexiones con dispositivos físicos o servidores remotos.
 
-Carga bibliotecas y parámetros de configuración inicial.
+- Carga de bibliotecas necesarias y parámetros de configuración predeterminados.
+- Preparación general del sistema para la ejecución de simulaciones o experimentos.
 
-Prepara el sistema para la ejecución de experimentos.
+QLabs.register
 
-**2. QLabs.register**
-Función: Registra entidades en el sistema QLabs para su identificación y gestión.
-Aplicaciones típicas:
+Una vez preparado el entorno, esta función permite registrar entidades dentro del sistema QLabs, posibilitando su posterior identificación y administración. Sus aplicaciones comunes incluyen:
 
-Autenticación de usuarios o dispositivos.
+Autenticación de usuarios, dispositivos o componentes experimentales.
+Configuración de perfiles experimentales personalizados.
+Asignación de recursos y permisos específicos dentro del entorno QLabs.
 
-Configuración de perfiles de experimentos.
+QLabs.launch
 
-Asignación de recursos específicos.
+Finalmente, esta función se encarga de iniciar los procesos principales dentro de QLabs. Sus operaciones pueden incluir:
 
-**3. QLabs.launch**
-Función: Inicia procesos dentro del entorno QLabs.
-Operaciones posibles:
+Ejecución de simulaciones o experimentos físicos o virtuales.
+Lanzamiento de interfaces gráficas de usuario.
+Puesta en marcha de servicios o procesos en segundo plano necesarios para la operación del sistema.
 
-Ejecución de simulaciones o experimentos.
-
-Lanzamiento de interfaces gráficas.
-
-Puesta en marcha de procesos en segundo plano.
-
-**Nota técnica:**
-Esta secuencia de comandos (setup → register → launch) sigue el flujo estándar de inicialización de sistemas, donde primero se prepara el entorno, luego se autentican los componentes, y finalmente se ejecutan las operaciones principales. La implementación específica puede variar según la versión de QLabs y los módulos instalados.
+![Imagen 1](imagenes/imagen1.png)
 
 ## Menú principal de QLabs
-Este es el menú principal de QLabs, una plataforma de laboratorios virtuales de Quanser que permite realizar experimentos de control y robótica de forma interactiva. A continuación, se detallan sus componentes:
 
-Opciones de Experimentos Disponibles
-Qube 2 - DC Motor
+Quanser QLabs es una plataforma de laboratorios virtuales diseñada para facilitar la enseñanza y experimentación en control y robótica de manera interactiva. Su menú principal presenta diversas opciones de experimentos que cubren distintos aspectos de la teoría de control, desde sistemas clásicos hasta dinámicas no lineales. A continuación, se describen los principales módulos disponibles:
 
-Enfoque: Control clásico de motores.
+1. Qube 2 – DC Motor
 
-Aplicación: Ideal para aprender fundamentos de sistemas de control (ej. PID) usando un motor de corriente continua (DC) con retroalimentación de posición/velocidad.
+Enfoque: Control clásico de sistemas lineales.
 
-Aero
+Aplicación: Este módulo está orientado al aprendizaje de fundamentos de control automático, como el diseño y ajuste de controladores PID. Utiliza un motor de corriente continua (DC) con sensores de posición y velocidad, lo que permite realizar prácticas de identificación de sistemas, modelado dinámico y diseño de lazo cerrado.
 
-Enfoque: Sistemas aerospaciales no lineales.
+2. Aero
 
-Aplicación: Simula el control de plataformas acopladas dinámicamente (como drones o helicópteros), donde se estudia estabilidad y control avanzado.
+Enfoque: Sistemas aeroespaciales dinámicamente acoplados y no lineales.
 
-Ball and Beam
+Aplicación: Simula una plataforma similar a un dron o helicóptero, permitiendo el estudio del comportamiento dinámico en múltiples grados de libertad. Este experimento es ideal para explorar conceptos avanzados como el control multivariable, la estabilidad de sistemas acoplados y la linealización de sistemas no lineales.
+
+3. Ball and Beam
 
 Enfoque: Dinámica no lineal y control en tiempo real.
 
-Aplicación: Experimentos con una viga y bola, donde se controla la posición de la bola mediante sensores y actuadores.
-
-Qube-Servo 2: Plataforma Principal
-El Qube-Servo 2 ha sido seleccionado como plataforma principal para nuestro proyecto debido a su implementación en el laboratorio de control de la universidad y sus capacidades integrales para el estudio de sistemas dinámicos.
+Aplicación: Este módulo representa el clásico sistema bola-viga, donde se busca mantener la bola en una posición deseada controlando el ángulo de inclinación de la viga. Es un ejemplo representativo de sistemas inestables de segundo orden, ampliamente utilizado para la enseñanza de técnicas de control robusto y diseño de observadores.
 
 **Características Principales
 Componentes principales:**
 
-Motor DC con encoder de alta precisión.
-
-Disco de inercia ajustable para modificar la dinámica del sistema.
-
-Tarjeta de adquisición de datos integrada.
+- Motor DC con encoder de alta precisión.
+- Disco de inercia ajustable para modificar la dinámica del sistema.
+- Tarjeta de adquisición de datos integrada.
 
 **Parámetros clave:**
 
-Voltaje nominal: 12V.
-
-Rango de velocidad: 0–3000 RPM.
-
-Resolución del encoder: 2048 pulsos por revolución.
+- Voltaje nominal: 12V.
+- Rango de velocidad: 0–3000 RPM.
+- Resolución del encoder: 2048 pulsos por revolución.
 
  **Software compatible:**
  
+- MATLAB/Simulink (via QUARC).
+- LabVIEW.
+- Python (con librerías de Quanser).
 
-MATLAB/Simulink (via QUARC).
-
-LabVIEW.
-
-Python (con librerías de Quanser).
+![Imagen 3](imagenes/imagen3.png)
 
 **Diferencias entre Qube-Servo 2 y Qube 3**
 
-Aunque inicialmente planeábamos trabajar con el Qube-Servo 2 (basado en las simulaciones disponibles en QLabs), el equipo físico disponible en el laboratorio de la universidad es el Qube 3. Afortunadamente, las diferencias entre ambos modelos no son significativas, lo que permite adaptar nuestro proyecto sin mayores complicaciones.
+Aunque inicialmente se planificó el desarrollo del proyecto utilizando el Qube-Servo 2, basándonos en las simulaciones disponibles en Quanser QLabs, el equipo físico disponible en el laboratorio de la universidad corresponde al Qube 3. Afortunadamente, las diferencias entre ambos modelos son mínimas en términos de estructura funcional y principios de operación, lo que permite realizar la transición sin mayores inconvenientes.
 
-Nota: El Qube 3 ofrece mayor precisión y opciones de conectividad, pero conserva la misma filosofía de diseño y compatibilidad con los mismos conceptos de control.
+![Imagen 4](imagenes/imagen4.png)
 
-**Integración con Simulink (MATLAB)**
+Los motores DC servo incorporados en el Qube-Servo 2 de Quanser se caracterizan por su alta precisión, robustez estructural y calidad de fabricación, cualidades que los hacen especialmente adecuados para su uso en entornos académicos y de investigación. Gracias a estas propiedades, ofrecen un comportamiento dinámico confiable y una respuesta consistente, esenciales para la enseñanza y validación de sistemas de control en lazo cerrado.
 
-El Quanser Qube-Servo 2 y otros sistemas de Quanser están diseñados para funcionar de manera óptima con Simulink (MATLAB), lo que permite implementar, simular y validar algoritmos de control en un entorno académico profesional.
+Adicionalmente, el Qube-Servo 2 y otros sistemas desarrollados por Quanser han sido diseñados para integrarse de forma óptima con Simulink, el entorno gráfico de simulación y modelado de sistemas de MATLAB. Esta integración proporciona a estudiantes e investigadores una plataforma versátil y profesional para el desarrollo de algoritmos de control.
 
-Ejemplo 1: Control en Cascada
-El diagrama muestra un sistema de control en cascada diseñado para que la velocidad de un motor siga una referencia de 1000 unidades. El sistema compara la velocidad deseada con la real y genera un error que pasa a un controlador PI, el cual calcula la corriente necesaria para alcanzar la velocidad objetivo.
+![Imagen 6](imagenes/imagen 6.png)
 
-**Resultado:**La gráfica muestra que la respuesta del sistema (línea azul) sigue correctamente a la referencia (línea amarilla), confirmando que el controlador funciona adecuadamente.
+La respuesta de la corriente del motor ante una señal de referencia o cambio en la entrada del sistema. Esta curva permite analizar la dinámica del lazo interno de corriente, evaluando aspectos como el tiempo de establecimiento, sobreimpulso y capacidad de seguimiento. Un buen desempeño en esta curva indica que el controlador de corriente está adecuadamente ajustado para responder de forma rápida y estable a las demandas del sistema de control de velocidad.
+ 
+![Imagen 7](imagenes/imagen7.png)
 
-**Ejemplo 2:** Control de Posición con PI Digital
-El diagrama muestra un sistema de control en lazo cerrado para el QUBE-Servo 2 implementado en Simulink, donde se regula la posición del motor utilizando un controlador PI digital.
+La respuesta dinámica de la velocidad del motor frente a una señal de referencia. Esta curva permite evaluar el desempeño del lazo externo de control de velocidad, observando características como el tiempo de respuesta, seguimiento de la referencia y la suavidad de la transición. Un seguimiento preciso indica una buena sintonización del controlador PI y una adecuada interacción con el lazo interno de corriente.
 
-## Características:
+![Imagen 11](imagenes/imagen11.png)
 
-Uso de Hardware-in-the-Loop (HIL).
+La imagen muestra la disposición típica del sistema QUBE-Servo, incluyendo la conexión entre el hardware físico y el entorno de desarrollo en MATLAB/Simulink. En esta configuración, el QUBE-Servo se conecta al computador a través de una interfaz USB, permitiendo la comunicación en tiempo real mediante la plataforma QUARC de Quanser. Esta configuración es utilizada para ejecutar algoritmos de control directamente sobre el sistema físico, así como para adquirir datos experimentales con fines de análisis, ajuste y validación de modelos dinámicos.
 
-Medición de corriente, velocidad y posición en tiempo real.
+![Imagen 8](imagenes/imagen8.png)
 
-Visualización del comportamiento del sistema.
+En la imagen se muestra la configuración del tiempo de muestreo en el entorno de Simulink, utilizada para ejecutar algoritmos de control en el sistema QUBE-Servo. Este parámetro se define dentro del modelo como un valor de paso fijo (Fixed-step size), el cual determina cada cuánto tiempo se actualiza el sistema durante la simulación o ejecución en tiempo real.
 
-## Figuras de Referencia
+Establecer un tiempo de muestreo adecuado es fundamental para garantizar la estabilidad y precisión del controlador, así como para evitar problemas de aliasing o sobrecarga computacional. En este ejemplo, se ha configurado un valor de 0.002 segundos (2 ms), el cual es comúnmente utilizado para aplicaciones de control rápido como el posicionamiento de motores DC servo.
 
-**Fig. 10:** Datos del Qube-Servo 2.
+![Imagen 9](imagenes/imagen9.png)
 
-**Fig. 11:** Tabla de datos del Qube-Servo 3.
+**Ejemplo 1**
 
-**Fig. 7:** Montaje de comprobación.
+El diagrama muestra un sistema de control en cascada diseñado para que la velocidad de un motor siga una referencia de 1000 unidades. El sistema compara la velocidad deseada con la real y genera un error que pasa a un controlador PI, el cual calcula la corriente necesaria para alcanzar la velocidad objetivo. Esta corriente deseada se compara con la real, y otro controlador regula la entrada al motor para ajustar la corriente. Así, mediante este doble lazo de control (uno externo de velocidad y uno interno de corriente), el sistema logra que la salida (velocidad) siga de forma precisa a la señal de referencia, lo que significa que "está siguiendo al seguidor
 
-**Fig. 8:** Curva de reacción de corriente.
+![Imagen 10](imagenes/imagen10.png)
 
-**Fig. 9:** Curva de reacción de velocidad.
+La gráfica se visualiza que la respuesta del sistema (línea azul) sigue correctamente a la referencia (línea amarilla), lo que confirma que el controlador diseñado está funcionando adecuadamente: la salida (velocidad angular o posición) alcanza y mantiene el valor deseado sin error aparente. Además, en la simulación se indica que el sistema está operando con el "Load servo base", sin la inercia removible. Esto significa que las condiciones del modelo físico son estándar, lo cual es importante para evaluar la estabilidad y el rendimiento del controlador en condiciones nominales.
 
-**Fig. 13** Configuración del QUBE-SERVO.
+![Imagen 11](imagenes/imagen11.png)
 
-**Fig. 14:** Tiempo de muestreo.
+**Ejemplo 2**
 
-**Fig. 21:** Montaje prueba relé por velocidad.
+El diagrama muestra un sistema de control en lazo cerrado para el QUBE-Servo 2 implementado en Simulink, donde se regula la posición del motor utilizando un controlador PI digital. La posición deseada se compara con la medida real obtenida del hardware a través de HIL (Hardware-in-the-Loop), y el error resultante alimenta al controlador, que genera la señal de control enviada al actuador mediante una salida analógica. El sistema también mide corriente, velocidad y posición del motor, que son retroalimentadas y visualizadas para monitorear el comportamiento del sistema en tiempo real. Esto permite que el motor siga con precisión la referencia de posición establecida.
+
+![Imagen 12](imagenes/imagen12.png)
+
+La gráfica de la respuesta en velocidad del sistema QUBE-Servo 2 a una entrada escalón, donde se observa que la curva (en color naranja) sigue una forma típicamente exponencial creciente hasta estabilizarse cerca del valor de referencia (línea amarilla). Esto indica que el sistema presenta un comportamiento estable, con un buen seguimiento de la referencia y sin sobrepaso significativo. El tiempo de establecimiento es de aproximadamente 1.87 segundos, con una frecuencia de muestreo de 1.75 kHz, lo que sugiere que el controlador PI implementado está correctamente sintonizado para alcanzar el valor deseado con rapidez y precisión. 
+
+![Imagen 13](imagenes/imagen13.png)
