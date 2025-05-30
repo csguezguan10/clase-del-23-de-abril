@@ -13,8 +13,6 @@ Quanser es una plataforma educativa y de investigación especializada en sistema
 - **Entorno en tiempo real**: Ideal para probar algoritmos de control (PID, automatización, etc.).
 - **Aplicaciones**: Desde docencia hasta prototipado industrial.
 
-## Primeros pasos
-
 Para iniciar correctamente el entorno de Quanser QLabs en MATLAB, se debe seguir una secuencia estándar de funciones que garantiza la configuración, registro e inicio de los procesos necesarios. A continuación, se describen las funciones empleadas en este procedimiento:
 
 QLabs.setup
@@ -100,7 +98,7 @@ Adicionalmente, el Qube-Servo 2 y otros sistemas desarrollados por Quanser han s
 
 La respuesta de la corriente del motor ante una señal de referencia o cambio en la entrada del sistema. Esta curva permite analizar la dinámica del lazo interno de corriente, evaluando aspectos como el tiempo de establecimiento, sobreimpulso y capacidad de seguimiento. Un buen desempeño en esta curva indica que el controlador de corriente está adecuadamente ajustado para responder de forma rápida y estable a las demandas del sistema de control de velocidad.
  
-![Imagen 7](imagenes/imagen7.png)
+![Imagen 10](Imagen/imagen10.png)
 
 La respuesta dinámica de la velocidad del motor frente a una señal de referencia. Esta curva permite evaluar el desempeño del lazo externo de control de velocidad, observando características como el tiempo de respuesta, seguimiento de la referencia y la suavidad de la transición. Un seguimiento preciso indica una buena sintonización del controlador PI y una adecuada interacción con el lazo interno de corriente.
 
@@ -112,9 +110,9 @@ La imagen muestra la disposición típica del sistema QUBE-Servo, incluyendo la 
 
 En la imagen se muestra la configuración del tiempo de muestreo en el entorno de Simulink, utilizada para ejecutar algoritmos de control en el sistema QUBE-Servo. Este parámetro se define dentro del modelo como un valor de paso fijo (Fixed-step size), el cual determina cada cuánto tiempo se actualiza el sistema durante la simulación o ejecución en tiempo real.
 
-Establecer un tiempo de muestreo adecuado es fundamental para garantizar la estabilidad y precisión del controlador, así como para evitar problemas de aliasing o sobrecarga computacional. En este ejemplo, se ha configurado un valor de 0.002 segundos (2 ms), el cual es comúnmente utilizado para aplicaciones de control rápido como el posicionamiento de motores DC servo.
+Establecer un tiempo de muestreo adecuado es fundamental para garantizar la estabilidad y precisión del controlador, así como para evitar problemas de aliasing o sobrecarga computacional. En este ejemplo, se ha configurado un valor de 0.00001 segundos, el cual es comúnmente utilizado para aplicaciones de control rápido como el posicionamiento de motores DC servo.
 
-![Imagen 9](imagenes/imagen9.png)
+![Imagen 9](Imagen/imagen12.png)
 
 **Ejemplo 1**
 
